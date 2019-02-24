@@ -194,6 +194,7 @@ i {
         width: 100vw;
         background: rgb(0, 70, 0);
         height: 9vh;
+        margin: 0;
     }
 
     #roll {
