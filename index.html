@@ -7,35 +7,34 @@
                 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">                    <title>Dice Game Two Players</title>
     </head>
     <body>
-        <div class="wrapper">
-            
-            <div id="p1Section" class="player-1-section active">
-                <h1 class="player-name" id="player-0">Player 1</h1>
-                <p class="player-score-1" id="score-0" type="number">0</p>
-                <div class="player-current-score">
-                    <p>CURRENT</p>
-                    <p class="player-current-score" id="current-score-0" type='number'>0</p>
-                </div>
-            </div>
-            
-            <div id="p2Section" class="player-2-section">
-                <h1 class="player-name" id="player-1">Player 2</h1>
-                <p class="player-score-2" id="score-1" type='number'>0</p>
-                <div class="player-current-score">
-                    <p>CURRENT</p>
-                    <p class="player-current-score" id="current-score-1" type='number'>0</p>
-                </div>
-            </div>
-            
-            <div class="menu">
+         <div class="menu">
                 <button id="reset"><i class="fas fa-plus-circle"></i>NEW GAME</button>
-                <img id="img" src="#" alt="">
+                
                     <div class="ext">
                         <button class="rollBtn hidden" id="roll"><i class="fas fa-sync-alt"></i>ROLL DICE</button>
                         <button class="holdBtn hidden" id="hold"><i class="fas fa-arrow-circle-down"></i>HOLD</button>
                     </div>
                     </div>
         </div>
+        <div class="wrapper">
+           
+            <div id="p1Section" class="player-1-section active">
+                <h1 class="player-name" id="player-0">Player 1</h1>
+                <p class="player-score-1" id="score-0" type="number">0</p>
+                <div class="player-current-score">
+                    <p>CURRENT</p>
+                    <p id="current-score-0" type='number'>0</p>
+                </div>
+            </div>
+            <div id="img"></div>
+            <div id="p2Section" class="player-2-section">
+                <h1 class="player-name" id="player-1">Player 2</h1>
+                <p class="player-score-2" id="score-1" type='number'>0</p>
+                <div class="player-current-score">
+                    <p>CURRENT</p>
+                    <p id="current-score-1" type='number'>0</p>
+                </div>
+            </div>
         
         <script src="app.js"></script>
     </body>

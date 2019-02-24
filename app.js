@@ -15,7 +15,6 @@ var roundOver = false;
 var p1Turn = true;
 var limit = 20;
 
-console.log(player1Score.textContent)
 
 reset.addEventListener('click', function(){
     player1.textContent = 'Player 1';
@@ -28,9 +27,10 @@ reset.addEventListener('click', function(){
     document.getElementById('current-score-1').textContent = 0;
     hold.classList.remove("hidden");
     roll.classList.remove("hidden");
-    die.src = 'img/dice1.png';
+    die.style.backgroundImage = "url('img/dice1.png')";
+    p1Section.style.opacity = '1';
+    p2Section.style.opacity = '1';
     gameOver = false;
-    
     p1Turn = true;
     p1Section.classList.add('active');
     p2Section.classList.remove('active');
@@ -42,7 +42,7 @@ roll.addEventListener('click', function (){
     if(!gameOver){
         var rollScore = Math.floor(Math.random()* 6) + 1;
             if(p1Turn){
-                die.src = 'img/dice' + rollScore + '.png';
+                die.style.backgroundImage = "url('img/dice" + rollScore + ".png')";
                 player1CurrentScore += rollScore;
                 document.getElementById('current-score-0').textContent = player1CurrentScore;
 
@@ -57,10 +57,16 @@ roll.addEventListener('click', function (){
                 if (player1CurrentScore >= limit){
                     player1.textContent = "WINNER";
                     document.getElementById('score-0').textContent = player1CurrentScore + player2Score;
+                    p1Section.classList.add('active');
+                    p2Section.classList.remove('active');
+                    p2Section.style.opacity = '0.5';
+                    roll.classList.add('hidden');
+                    hold.classList.add('hidden');
                     gameOver = true;
                 };
+
             } else {
-                    die.src = 'img/dice' + rollScore + '.png';
+                    die.style.backgroundImage = "url('img/dice" + rollScore + ".png')";
                     player2CurrentScore += rollScore;
                     document.getElementById('current-score-1').textContent = player2CurrentScore;
 
@@ -77,8 +83,12 @@ roll.addEventListener('click', function (){
                     if (player2CurrentScore >= limit){
                         player2.textContent = "WINNER";
                         document.getElementById('score-1').textContent = player2CurrentScore + player2Score;
-                        gameOver = true;
-                        
+                        p2Section.classList.add('active');
+                        p1Section.classList.remove('active');
+                        p1Section.style.opacity = '0.5';
+                        roll.classList.add('hidden');
+                        hold.classList.add('hidden');
+                        gameOver = true;    
                     };
                 } 
     }
@@ -97,6 +107,11 @@ hold.addEventListener('click', function (){
 
                 if (player1Score >= limit){
                     player1.textContent = "WINNER";
+                    p2Section.classList.remove('active');
+                    p1Section.classList.add('active');
+                    p2Section.style.opacity = '0.5';
+                    roll.classList.add('hidden');
+                    hold.classList.add('hidden');
                     gameOver = true;
                 }
                 p1Turn = false;
@@ -110,6 +125,11 @@ hold.addEventListener('click', function (){
                 document.getElementById('current-score-1').textContent = 0;
                 if (player2Score >= limit){
                     player2.textContent = "WINNER";
+                    p2Section.classList.add('active');
+                    p1Section.classList.remove('active');
+                    p1Section.style.opacity = '0.5';
+                    roll.classList.add('hidden');
+                    hold.classList.add('hidden');
                     gameOver = true;
                 }
                 p1Turn = true;
