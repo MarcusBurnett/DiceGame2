@@ -227,6 +227,7 @@ i {
         justify-content: space-between;
         padding: 0;
         border: 3px solid white;
+        border-radius: 0.7rem;
     }
 
     #p2Section {
@@ -237,6 +238,15 @@ i {
         justify-content: space-between;
         padding: 0;
         border: 3px solid white;
+        border-radius: 0.7rem;
+    }
+
+    .fas {
+        display: none;
+    }
+
+    button {
+        font-size: 15px;
     }
 
 
@@ -262,12 +272,14 @@ i {
         font-weight: 100;
         padding: 0;
         margin-left: 25vw;
+        font-size: 4rem;
     }
 
     #score-1 {
         font-weight: 100;
         padding: 0;
         margin-left: 25vw;
+        font-size: 4rem;
     }
 
     #img {
