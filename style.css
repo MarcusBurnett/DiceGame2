@@ -195,6 +195,13 @@ i {
         background: rgb(0, 70, 0);
         height: 9vh;
         margin: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .ext {
+        position: absolute;
+        bottom: 0;
     }
 
     #roll {
