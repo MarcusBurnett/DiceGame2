@@ -185,7 +185,8 @@ i {
 @media screen and (max-width: 600px){
     .menu {
         width: 100vw;
-        height: 100vh;
+        max-height: 100vh;
+        min-height: 100%;
         bottom: 0;
         top: 0;
     }
