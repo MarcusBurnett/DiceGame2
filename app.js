@@ -45,13 +45,17 @@ function resetGame(){
 
 function rollDie(){
     if(!gameOver){
-        var rollScore = Math.floor(Math.random()* 6) + 1;
+        var rollScore = randomNum();
             if(p1Turn){
                 p1Roll(rollScore);
             } else {
                 p2Roll(rollScore);
             } 
     }
+}
+
+function randomNum(){
+    return Math.floor(Math.random()* 6) + 1;
 }
 
 function holdDie(){
